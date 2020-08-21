@@ -9,3 +9,7 @@ app.use(express.static("public"));
 app.listen(3000, function () {
   console.log("Server is up and running");
 });
+
+app.get("/", function (request, response) {
+  response.render("home");
+});
