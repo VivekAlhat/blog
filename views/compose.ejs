@@ -1,7 +1,29 @@
 <%- include("partials/header") -%>
 <div class="container compose content">
-  <h1>Compose</h1>
-  <input type="text" name="postData" id="postData" />
-  <button type="submit" name="button">Publish</button>
+  <form action="/compose" method="post">
+    <div class="form-group">
+      <label for="title">Post Title:</label>
+      <input
+        class="form-control"
+        type="text"
+        name="postTitle"
+        id="postTitle"
+        autocomplete="false"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="data">Post:</label>
+      <textarea
+        class="form-control"
+        name="postData"
+        id="postData"
+        rows="10"
+        autocomplete="false"
+        required
+      ></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit" name="button">Publish</button>
+  </form>
 </div>
 <%- include("partials/footer") -%>
