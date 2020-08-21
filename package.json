@@ -1,0 +1,31 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Dynamic blog using node, express and ejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VivekAlhat/blog.git"
+  },
+  "keywords": [
+    "dynamic",
+    "blog",
+    "node",
+    "ejs"
+  ],
+  "author": "Vivek Alhat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VivekAlhat/blog/issues"
+  },
+  "homepage": "https://github.com/VivekAlhat/blog#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
+}
