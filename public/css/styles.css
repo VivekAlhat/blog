@@ -7,6 +7,11 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+button {
+  width: 8%;
+  cursor: pointer;
+}
+
 #footer {
   background-color: #f6f4e6;
   position: fixed;

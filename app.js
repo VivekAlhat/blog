@@ -29,3 +29,7 @@ app.get("/about", function (request, response) {
 app.get("/contact", function (request, response) {
   response.render("contact", { contactContent: contactContent });
 });
+
+app.get("/compose", function (request, response) {
+  response.render("compose");
+});
