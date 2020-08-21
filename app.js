@@ -1,6 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
+// variables
+const homeContent = "This is where you will see all my blogposts";
+
 const app = express();
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -11,5 +14,5 @@ app.listen(3000, function () {
 });
 
 app.get("/", function (request, response) {
-  response.render("home");
+  response.render("home", { homeContent: homeContent });
 });
