@@ -8,12 +8,11 @@ body {
 }
 
 #footer {
+  background-color: #f6f4e6;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #1b262c;
-  color: #eeeeee;
   text-align: center;
 }
 
@@ -31,6 +30,10 @@ body {
   margin: 0 15px;
 }
 
-.home {
+.nav-link:hover {
+  color: #41444b;
+}
+
+.content {
   margin-top: 30px;
 }
