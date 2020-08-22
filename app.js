@@ -1,3 +1,4 @@
+const _ = require("lodash");
 const express = require("express");
 const bodyParser = require("body-parser");
 
@@ -38,6 +39,13 @@ app.post("/compose", function (request, response) {
 });
 
 app.get("/posts/:post", function (request, response) {
-  console.log(request.params.post);
-  response.redirect("/");
+  const pst = _.lowerCase(request.params.post);
+  posts.forEach(function (p) {
+    const h = _.lowerCase(p.title);
+    if (h === pst) {
+      response.render("post", { title: p.title, post: p.post });
+    } else {
+      response.render("error");
+    }
+  });
 });
