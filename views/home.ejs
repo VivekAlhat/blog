@@ -4,7 +4,10 @@
   <%posts.forEach(function(post){%>
   <div class="post">
     <h3><%= post.title %></h3>
-    <p><%= (post.post).substring(0,70) + " ..." %></p>
+    <p>
+      <%= (post.post).substring(0,70) + " ..." %>
+      <a href="/posts/<%= post.title %>">Read More</a>
+    </p>
   </div>
   <%})%>
 </div>
