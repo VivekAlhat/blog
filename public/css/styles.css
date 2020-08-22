@@ -20,6 +20,11 @@ textarea {
   resize: none;
 }
 
+h3 {
+  font-weight: bold;
+  margin-bottom: 2%;
+}
+
 #footer {
   background-color: #f6f4e6;
   position: fixed;
@@ -64,4 +69,9 @@ textarea {
   margin-top: 10px;
   padding: 1%;
   border-bottom: 1px solid #dfddc7;
+}
+
+.blogpost {
+  margin-top: 10px;
+  padding: 1%;
 }
