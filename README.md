@@ -1,2 +1,3 @@
 # blog
-Dynamic blog website using node, express and ejs
+
+Dynamic blog website using node
