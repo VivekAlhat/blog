@@ -4,7 +4,7 @@
   <%posts.forEach(function(post){%>
   <div class="post">
     <h3><%= post.title %></h3>
-    <p><%= post.post %></p>
+    <p><%= (post.post).substring(0,70) + " ..." %></p>
   </div>
   <%})%>
 </div>
