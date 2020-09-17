@@ -9,12 +9,19 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+// User Credentials
+const user = process.env.USERID;
+const password = process.env.PASSWORD;
+
 // Database setup
-mongoose.connect("mongodb://127.0.0.1:27017/blog", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-});
+mongoose.connect(
+  "mongodb+srv://" + user + ":" + password + "@cluster0.mqcxw.mongodb.net/blog",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  }
+);
 
 const blogSchema = new mongoose.Schema({
   pTitle: {
@@ -29,7 +36,11 @@ const blogSchema = new mongoose.Schema({
 
 const Post = mongoose.model("Post", blogSchema);
 
-app.listen(3000, function () {
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+app.listen(port, function () {
   console.log("Server is up and running");
 });
 

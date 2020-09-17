@@ -19,6 +19,9 @@
   ],
   "author": "Vivek Alhat",
   "license": "MIT",
+  "engines": {
+    "node": "12.18.3"
+  },
   "bugs": {
     "url": "https://github.com/VivekAlhat/blog/issues"
   },
