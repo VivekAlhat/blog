@@ -3,13 +3,11 @@
 <div class="container content">
   <%posts.forEach(function(post){%>
   <div class="post">
-    <h3><%= post.title %></h3>
+    <h3><%= post.pTitle %></h3>
     <p>
-      <%= (post.post).substring(0,70) + " ..." %>
-      <a href="/posts/<%= post.title %>">Read More</a>
+      <%= (post.pContent).substring(0,70) + " ..." %>
+      <a href="/posts/<%= post._id %>">Read More</a>
     </p>
   </div>
   <%})%>
 </div>
-
-<%- include("partials/footer") -%>
