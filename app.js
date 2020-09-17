@@ -72,9 +72,24 @@ app.get("/posts/:postid", function (request, response) {
         page: res.pTitle,
         title: res.pTitle,
         post: res.pContent,
+        pid: res._id,
       });
     } else {
       console.log(err);
     }
   });
+});
+
+app.get("/delete", function (request, response) {
+  response.redirect("/");
+});
+
+app.post("/delete", function (request, response) {
+  const pid = request.body.pid;
+  Post.findByIdAndRemove(pid, function (err) {
+    if (err) {
+      console.log(err);
+    }
+  });
+  response.redirect("/");
 });

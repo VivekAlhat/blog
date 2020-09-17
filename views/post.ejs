@@ -1,8 +1,12 @@
 <%- include("partials/header") -%>
 
 <div class="container content">
-  <div class="blogpost">
-    <h3><%= title %></h3>
-    <p><%= post %></p>
-  </div>
+  <div class="blogpost"></div>
+  <form action="/delete" method="post">
+      <h3><%= title %></h3>
+      <p><%= post %></p>
+      <input type="hidden" value="<%= pid %>" name="pid"/>
+      <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+    </div>
+  </form>
 </div>
